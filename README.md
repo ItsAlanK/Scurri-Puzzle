@@ -17,5 +17,10 @@ Puzzle sections:
 
 ## Section 2 <a id=section-2></a>
 
+- Program prints numbers by looping through range of values 1-100.
+- Before printing number, checks for if each numbers is a multiple of 3 & 5 while iterating to print "ThreeFive". Else ->
+- Checks if number is a multple of 3 to print "Three" (More common than mults of 5 so check this first). Else ->
+- Checks if number is a multiple of 5 to print "Five"
+- Prints iteration number if no multiples are found.
 
 ## Section 3 <a id=section-3></a>
