@@ -17,6 +17,8 @@ Puzzle sections:
 
 ## Section 2 <a id=section-2></a>
 
+See [print_numbers.py](./print_numbers.py)
+
 - Program prints numbers by looping through range of values 1-100.
 - Before printing number, checks for if each numbers is a multiple of 3 & 5 while iterating to print "ThreeFive". Else ->
 - Checks if number is a multple of 3 to print "Three" (More common than mults of 5 so check this first). Else ->
@@ -24,6 +26,8 @@ Puzzle sections:
 - Prints iteration number if no multiples are found.
 
 ## Section 3 <a id=section-3></a>
+
+See [print_numbers.py](./postcode_formatter.py)
 
 ### Rules for Postcode formatting (UK)
 - Postcodes broken up into Outward and Inward code
