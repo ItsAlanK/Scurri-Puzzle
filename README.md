@@ -24,3 +24,18 @@ Puzzle sections:
 - Prints iteration number if no multiples are found.
 
 ## Section 3 <a id=section-3></a>
+
+### Rules for Postcode formatting (UK)
+- Postcodes broken up into Outward and Inward code
+- Alphanumeric with 6 - 8 characters (including a space)
+- Outward Code:
+    - Before single space
+    - 2-4 Characters long
+    - Starts with 1-2 letters
+    - Ends with 1 digit, 2 digits or 1 digit + 1 letter
+- Inward Code:
+    - 3 characters long
+    - 1 digit, followed by...
+    - 2 characters (alphabetic)
+
+Regular Expression provided by Wikipedia including special cases like oversea territories to be used for validation: `^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$`
