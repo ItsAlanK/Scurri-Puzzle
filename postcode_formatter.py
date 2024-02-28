@@ -22,8 +22,21 @@ class PostcodeFormatter:
         """
         regex = r'^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$'
         return re.match(regex, postcode) is not None
-
+    
+    def format_postcode(postcode):
+        """
+        Format the postcode provided to UK format.
+        Args:
+            postcode: str
+        Returns:
+            str: Formatted postcode
+        """
+        postcode = postcode.upper()
+        postcode = postcode.replace(" ", "")
+        return postcode[:-3] + " " + postcode[-3:]
 
 # TEST IS VALID METHOD
-print(PostcodeFormatter.is_valid("Hello"))
-print(PostcodeFormatter.is_valid("SW1A 1AA"))
+pc = "Ec1A1BB"
+print(PostcodeFormatter.is_valid(pc)) 
+print(PostcodeFormatter.format_postcode(pc))
+print(PostcodeFormatter.is_valid(PostcodeFormatter.format_postcode(pc))) 
