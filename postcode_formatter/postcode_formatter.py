@@ -53,9 +53,3 @@ class PostcodeFormatter:
             return cleaned_postcode
         else:
             return None
-
-        
-
-# TEST IS VALID METHOD
-pc = "Ec1?A1B B/"
-print(PostcodeFormatter.clean_and_validate_postcode(pc))
