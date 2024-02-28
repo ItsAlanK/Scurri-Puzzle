@@ -17,7 +17,7 @@ Puzzle sections:
 
 ## Section 2 <a id=section-2></a>
 
-See [print_numbers.py](./print_numbers.py)
+See [print_numbers.py](./print_numbers/print_numbers.py)
 
 - Program prints numbers by looping through range of values 1-100.
 - Before printing number, checks for if each numbers is a multiple of 3 & 5 while iterating to print "ThreeFive". Else ->
