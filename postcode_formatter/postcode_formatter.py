@@ -53,3 +53,9 @@ class PostcodeFormatter:
             return cleaned_postcode
         else:
             return None
+
+## Example usage
+# postcode = "SW1a1AA"
+# print(PostcodeFormatter.is_valid(postcode)) # False
+# print(PostcodeFormatter.format_postcode(postcode)) # SW1A 1AA
+# print(PostcodeFormatter.clean_and_validate_postcode(postcode)) # SW1A 1AA
