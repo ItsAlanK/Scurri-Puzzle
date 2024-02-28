@@ -48,15 +48,15 @@ Regular Expression provided by Wikipedia including special cases like oversea te
 ### Postcode Formatter lib
 Postcode Formatter library provides a class `PostcodeFormatter` which contains methods for validating a given postcode, formatting a given postcode and doing both at once.
 
-- `PostcodeFormatter.is_valid` takes a postcode as an argument and checks against the UK postcodes format regular expression mentioned above to validate a postcode without processing or changing it. *Spaces are not taken into consideration but it is case sensitive*
-- `PostcodeFormatter.format_postcode` takes a postcode as an argument, then:
+- `PostcodeFormatter.is_valid()` takes a postcode as an argument and checks against the UK postcodes format regular expression mentioned above to validate a postcode without processing or changing it. *Spaces are not taken into consideration but it is case sensitive*
+- `PostcodeFormatter.format_postcode()` takes a postcode as an argument, then:
     - strips away any special characters
     - removes spaces
     - sets all characters to upper case
     - adds a space before the last 3 characters
 
-    This method does require that the correct amount of characters are provided as it would not know which ones to strip away if excess characters are present. Advisable to use `is_valid` after formatting to confirm if it is now a valid postcode.
-- `PostcodeFormatter.clean_and_validate_postcode` takes a postcode as an argument and first applies the `format_postcode` method. It then uses the `is_valid` method to decide whether to return the formatted postcode if it is valid or `None` if it is not valid. This combines the two previous methods into one to save running each if both are desired.
+    This method does require that the correct amount of characters are provided as it would not know which ones to strip away if excess characters are present. Advisable to use `is_valid()` after formatting to confirm if it is now a valid postcode.
+- `PostcodeFormatter.clean_and_validate_postcode()` takes a postcode as an argument and first applies the `format_postcode()` method. It then uses the `is_valid()` method to decide whether to return the formatted postcode if it is valid or `None` if it is not valid. This combines the two previous methods into one to save running each if both are desired.
 
 **Included also is an example project ([example_project.py](./postcode_formatter/example_project.py)) which allows you to test postcodes with a simple command line app**
 
