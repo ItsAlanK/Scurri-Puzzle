@@ -72,3 +72,7 @@ Postcode Formatter library provides a class `PostcodeFormatter` which contains m
         ```
         python3 postcode_formatter/test_postcode_formatter.py
         ```
+- For the Postcode Formatter Example project which allows you to test postcodes through the cmd line use command:
+    ```
+    python3 postcode_formatter/example_project.py
+    ```
