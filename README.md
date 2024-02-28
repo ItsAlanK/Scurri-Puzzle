@@ -58,6 +58,8 @@ Postcode Formatter library provides a class `PostcodeFormatter` which contains m
     This method does require that the correct amount of characters are provided as it would not know which ones to strip away if excess characters are present. Advisable to use `is_valid` after formatting to confirm if it is now a valid postcode.
 - `PostcodeFormatter.clean_and_validate_postcode` takes a postcode as an argument and first applies the `format_postcode` method. It then uses the `is_valid` method to decide whether to return the formatted postcode if it is valid or `None` if it is not valid. This combines the two previous methods into one to save running each if both are desired.
 
+**Included also is an example project ([example_project.py](./postcode_formatter/example_project.py)) which allows you to test postcodes with a simple command line app**
+
 ## Running files
 - To run the Print Numbers module, from the main `Scurri-Puzzle` directory run to command: 
     ```
