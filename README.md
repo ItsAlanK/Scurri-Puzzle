@@ -43,3 +43,15 @@ See [postcode_formatter.py](./postcode_formatter/postcode_formatter.py)
     - 2 characters (alphabetic)
 
 Regular Expression provided by Wikipedia including special cases like oversea territories to be used for validation: `^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$`
+
+Postcode Formatter library provides a class `PostcodeFormatter` which contains methods for validating a given postcode, formatting a given postcode and doing both at once.
+
+- `PostcodeFormatter.is_valid` takes a postcode as an argument and checks against the UK postcodes format regular expression mentioned above to validate a postcode without processing or changing it. *Spaces are not taken into consideration but it is case sensitive*
+- `PostcodeFormatter.format_postcode` takes a postcode as an argument, then:
+    - strips away any special characters
+    - removes spaces
+    - sets all characters to upper case
+    - adds a space before the last 3 characters
+
+    This method does require that the correct amount of characters are provided as it would not know which ones to strip away if excess characters are present. Advisable to use `is_valid` after formatting to confirm if it is now a valid postcode.
+- `PostcodeFormatter.clean_and_validate_postcode` takes a postcode as an argument and first applies the `format_postcode` method. It then uses the `is_valid` method to decide whether to return the formatted postcode if it is valid or `None` if it is not valid. This combines the two previous methods into one to save running each if both are desired.
