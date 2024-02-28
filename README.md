@@ -27,7 +27,7 @@ See [print_numbers.py](./print_numbers.py)
 
 ## Section 3 <a id=section-3></a>
 
-See [postcode_formatter.py](./postcode_formatter.py)
+See [postcode_formatter.py](./postcode_formatter/postcode_formatter.py)
 
 ### Rules for Postcode formatting (UK)
 - Postcodes broken up into Outward and Inward code

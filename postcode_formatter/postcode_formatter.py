@@ -38,8 +38,24 @@ class PostcodeFormatter:
         cleaned_postcode = cleaned_postcode.upper()
         return cleaned_postcode[:-3] + " " + cleaned_postcode[-3:]
 
+    def clean_and_validate_postcode(postcode):
+        """
+        Method to clean and validate a postcode to return valid postcode if possible.
+        Uses cleaning and validating rules from format_postcode and is_valid methods.
+        Args:
+            postcode: str
+        Returns:
+            str: Formatted postcode if valid, None if not.
+        """
+
+        cleaned_postcode = PostcodeFormatter.format_postcode(postcode)
+        if PostcodeFormatter.is_valid(cleaned_postcode):
+            return cleaned_postcode
+        else:
+            return None
+
+        
+
 # TEST IS VALID METHOD
 pc = "Ec1?A1B B/"
-print(PostcodeFormatter.is_valid(pc)) 
-print(PostcodeFormatter.format_postcode(pc))
-print(PostcodeFormatter.is_valid(PostcodeFormatter.format_postcode(pc))) 
+print(PostcodeFormatter.clean_and_validate_postcode(pc))
