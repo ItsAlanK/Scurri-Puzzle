@@ -44,6 +44,7 @@ See [postcode_formatter.py](./postcode_formatter/postcode_formatter.py)
 
 Regular Expression provided by Wikipedia including special cases like oversea territories to be used for validation: `^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$`
 
+### Postcode Formatter lib
 Postcode Formatter library provides a class `PostcodeFormatter` which contains methods for validating a given postcode, formatting a given postcode and doing both at once.
 
 - `PostcodeFormatter.is_valid` takes a postcode as an argument and checks against the UK postcodes format regular expression mentioned above to validate a postcode without processing or changing it. *Spaces are not taken into consideration but it is case sensitive*
