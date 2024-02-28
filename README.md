@@ -14,6 +14,7 @@ Puzzle sections:
 
 ## Section 1 <a id=section-1></a>
 
+A project that I am particularly proud of is [my final project](https://github.com/ItsAlanK/apr-breathwork) from my Full-Stack Development course with Code Institute. I am very happy with the results both in the development and documentation. It was a large project that required a lot of time and effort to get right. I also found it very valuable as it gave me the opportunity to learn about relational databases, Django and a bit of AWS and API's while also getting more comfortable with more complex projects and Python in general. I enjoy the process or setting up, structuring and documenting projects so I spent a lot of time getting things right there and I feel that it shows in the README and file structure.
 
 ## Section 2 <a id=section-2></a>
 
